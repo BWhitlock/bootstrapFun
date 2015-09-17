@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/maincss.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../css/Hover-master/css/hover.css" rel="stylesheet" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+    <script>
+      // Get the headers position from the top of the page, plus its own height
+      var startY = 450;
+
+      $(window).scroll(function(){
+        checkY();
+      });
+
+      function checkY(){
+        if( $(window).scrollTop() > startY ){
+            $('.scrollHeader').slideDown();
+        }else{
+            $('.scrollHeader').hide();
+        }
+      }
+
+      // Do this on load just in case the user starts half way down the page
+      checkY();
+
+      $(document).ready(function() {
+    	$('a[rel="relativeanchor"]').click(function(){
+    	    $('html, body').animate({
+    	        scrollTop: $( $.attr(this, 'href') ).offset().top + -100
+    	    }, 500);
+    	    return false;
+    	});
+    });
+
+
+    </script>
+</head>
+<body>
+<div id="topSection">
+  <div class="centerText">
+    <h1 id="myName">Bradey Yarbrough Whitlock</h1>
+    <h3 id="myPosition">Software Delevoper</h3>
+  </div>
+  <img id="cityImage" src="http://static1.1.sqspcdn.com/static/f/415905/12609808/1307570384597/City.png?token=ILO2R902GOui0g0PCL1uQgZVU9c%3D" alt="City" width="100%">
+</div>
+
+<div class='scrollHeader'>
+  <a href="#aboutMeSection" rel='relativeanchor' class='box hvr-bounce-to-top'>
+    <i class="material-icons">face</i>
+    <h4 class='boxText'>About Me</h4>
+  </a>
+  <a href='#myExperienceSection' rel='relativeanchor' class='box hvr-bounce-to-top'>
+    <i class="material-icons">computer</i>
+    <h4 class='boxText'>My Experience</h4>
+  </a>
+  <a class='box hvr-bounce-to-top'>
+    <i class="material-icons">email</i>
+    <h4 class='boxText'>Contact Me</h4>
+  </a>
+</div>
+
+<div id="aboutMeSection">
+  <div class='centerText'>
+    <h1 class='header'>About Me</h1>
+  </div>
+  <hr>
+  <img id='aboutMePicture' class='' src='../images/meBlue.jpg'>
+  <div id='aboutMeText' class='centerText'>
+    <h3>Im Bradey!</h3>
+    <ul>
+      <li><h1>Coffee</h1></li>
+      <li type="square">Tea</li>
+      <li>Milk</li>
+    </ul>  </div>
+</div>
+
+<div id="myExperienceSection">
+  <div class='centerText'>
+    <h1 class='header'>My Experience</h1>
+  </div>
+  <hr>
+  <img id='aboutMePicture' src='../images/meBlue.jpg'>
+  <div id='aboutMeText' class='centerText'>
+    <h3>Im Bradey!</h3>
+  </div>
+</div>
+
+
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
